@@ -899,3 +899,14 @@ footer.site-footer {
 @media (max-width: 480px) {
   .people-grid, .people-grid.pc { grid-template-columns: 1fr; }
 }
+/* ==================== MASTHEAD layout fix (4 children) ==================== */
+.masthead-inner > .brand-text { flex: 1 1 auto; min-width: 0; }
+.masthead-inner > .masthead-right { margin-left: auto; flex-shrink: 0; }
+@media (max-width: 880px) {
+  .masthead-inner { flex-wrap: wrap; gap: 16px; }
+  .masthead-inner > .masthead-right {
+    margin-left: 0; width: 100%; text-align: left;
+    border-left: none; padding-left: 0; padding-top: 12px;
+    border-top: 1px solid var(--rule);
+  }
+}
