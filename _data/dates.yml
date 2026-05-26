@@ -1,0 +1,22 @@
+# Important dates. Edit this file once a year and the site updates.
+# Use ISO format internally; display strings let you override the rendering.
+
+- label: "Workshop paper abstract due"
+  date: "2026-06-22"
+  display: "Monday, June 22, 2026"
+- label: "Full workshop paper due"
+  date: "2026-06-29"
+  display: "Monday, June 29, 2026"
+- label: "Workshop paper acceptance notification"
+  date: "2026-07-20"
+  display: "Monday, July 20, 2026"
+- label: "Workshop paper author registration"
+  date: "2026-07-27"
+  display: "Monday, July 27, 2026"
+- label: "Final workshop paper for proceedings due"
+  date: "2026-07-27"
+  display: "Monday, July 27, 2026"
+- label: "Workshop date"
+  date: "2026-12-01"  # placeholder — will be aligned with QCE'26 schedule
+  display: "TBD (aligned with QCE'26 schedule)"
+  tentative: true

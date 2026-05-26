@@ -1,0 +1,11 @@
+# Topics of interest. Order matters — they are numbered 01..NN automatically.
+
+- "System and infrastructure design for DQC"
+- "Network-aware quantum circuit partitioning"
+- "Distributed circuit execution and compilation"
+- "Quantum interconnects and network topologies"
+- "Quantum systems software, compilers, and middleware for distributed execution"
+- "Quantum networking, entanglement routing, resource management for DQC"
+- "Cross-layer DQC simulation and benchmarking"
+- "Hybrid quantum-classical distributed systems"
+- "Applications enabled by DQC"

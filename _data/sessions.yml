@@ -1,0 +1,37 @@
+# Tentative agenda. Set `kind` to one of: opening | session | discussion | closing.
+# Sessions get auto-numbered.
+
+- kind: opening
+  name: "Opening & Keynote"
+  time: "Session opens"
+  body: ""
+
+- kind: session
+  name: "Physical- and Link-Layer Foundations for DQC"
+  time: "TBD"
+  body: "Physical-layer constraints of qubit interconnects, link-layer protocols, and the device characteristics that bound multi-QPU computation. Invited talk + contributed presentations."
+
+- kind: session
+  name: "Quantum Networking and Resource Management in DQC"
+  time: "TBD"
+  body: "Entanglement routing, network topologies, and resource management for the quantum links that bind QPUs together. Invited talk + contributed presentations."
+
+- kind: session
+  name: "Systems and Software for DQC Execution"
+  time: "TBD"
+  body: "Distributed compilers, runtimes, and middleware. Network-aware circuit partitioning and execution orchestration over multi-QPU systems. Invited talk + contributed presentations."
+
+- kind: session
+  name: "DQC Applications and Cross-Layer Co-Design"
+  time: "TBD"
+  body: "Applications enabled by DQC, hybrid quantum-classical distributed systems, and co-design opportunities that emerge when application requirements drive lower-layer decisions. Invited talk + contributed presentations."
+
+- kind: discussion
+  name: "Discussion — DQC Design Challenges and Future Directions"
+  time: "Open forum"
+  body: ""
+
+- kind: closing
+  name: "Closing Remarks"
+  time: "Wrap-up"
+  body: ""

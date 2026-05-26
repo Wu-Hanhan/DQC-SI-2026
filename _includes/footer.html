@@ -1,0 +1,27 @@
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-block">
+      <div class="brand-foot">DQC<span class="si">-SI</span></div>
+      <p>{{ site.full_name }} Workshop, held in conjunction with <a href="{{ site.host_conference_url }}" target="_blank" rel="noopener">{{ site.host_conference }}</a>.</p>
+    </div>
+    <div class="footer-block">
+      <h5>Contact</h5>
+      <p>Main contact</p>
+      <a href="mailto:{{ site.main_contact_email }}">{{ site.main_contact_email }}</a>
+    </div>
+    <div class="footer-block">
+      <h5>Submit</h5>
+      <a href="{{ site.submission_url }}" target="_blank" rel="noopener">EasyChair →</a>
+    </div>
+    <div class="footer-block">
+      <h5>Quick links</h5>
+      <a href="#" data-page="cfp">Call for Papers</a>
+      <a href="#" data-page="program">Program</a>
+      <a href="#" data-page="committee">Committee</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© {{ site.year }} {{ site.short_name }} Workshop · {{ site.host_conference }}</div>
+  </div>
+</footer>

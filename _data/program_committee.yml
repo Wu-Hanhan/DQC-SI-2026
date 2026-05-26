@@ -1,0 +1,32 @@
+# Tentative program committee. Titles are best-effort based on each person's
+# official faculty page at the time of compilation (May 2026).
+
+- name: "Zhen Ni"
+  title: "Associate Professor"
+  affiliation: "Florida Atlantic University"
+  url: "https://www.fau.edu/engineering/directory/faculty/ni/"
+  photo: "zhen-ni.jpg"
+
+- name: "Ruozhou Yu"
+  title: "Assistant Professor"
+  affiliation: "North Carolina State University"
+  url: "https://ruozhouy.github.io/"
+  photo: "ruozhou-yu.jpg"
+
+- name: "Chen Qian"
+  title: "Professor"
+  affiliation: "University of California, Santa Cruz"
+  url: "https://qianlabucsc.github.io/"
+  photo: "chen-qian.jpg"
+
+- name: "Walid Saad"
+  title: "Professor, IEEE Fellow"
+  affiliation: "Virginia Tech"
+  url: "https://ece.vt.edu/people/profile/saad.html"
+  photo: "walid-saad.jpg"
+
+- name: "Brian L. Mark"
+  title: "Professor"
+  affiliation: "George Mason University"
+  url: "https://people-ece.vse.gmu.edu/~bmark/"
+  photo: "brian-mark.jpg"

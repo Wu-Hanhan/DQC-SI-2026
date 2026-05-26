@@ -1,0 +1,231 @@
+---
+layout: default
+---
+
+<!-- ABOUT -->
+<article class="page active" id="page-about">
+  <div class="page-header">
+    <div class="page-eyebrow">An IEEE QCE {{ site.year }} Workshop</div>
+    <h1 class="page-title">Distributed Quantum Computing <em>Systems</em> and <em>Infrastructure</em></h1>
+    <p class="page-subtitle">A new workshop establishing cross-layer infrastructure as a foundational paradigm for scalable, networked quantum systems — connecting physical-layer constraints, quantum networking, system software, and applications.</p>
+  </div>
+
+  <div class="hero-card">
+    <div class="field">
+      <div class="label">Host Conference</div>
+      <div class="value"><strong>IEEE QCE {{ site.year }}</strong>IEEE Quantum Week</div>
+    </div>
+    <div class="field">
+      <div class="label">Format</div>
+      <div class="value"><strong>Half / full day</strong>Invited talks · peer-reviewed papers · discussion</div>
+    </div>
+    <div class="field">
+      <div class="label">Paper limit</div>
+      <div class="value"><strong>{{ site.data.workshop.cfp.page_limit }}</strong>IEEE conference format · {{ site.data.workshop.cfp.review_type | downcase }}</div>
+    </div>
+    <div class="field">
+      <div class="label">Main contact</div>
+      <div class="value"><strong>{{ site.data.organizers[0].name }}</strong><a href="mailto:{{ site.main_contact_email }}">{{ site.main_contact_email }}</a></div>
+    </div>
+  </div>
+
+  <h2 class="subhead">Workshop summary</h2>
+  <div class="about-layout">
+    <div class="prose">
+      <p>{{ site.data.workshop.summary }}</p>
+      <p>{{ site.data.workshop.abstract }}</p>
+    </div>
+    <div class="sidecard">
+      <h4>— Workshop in brief</h4>
+      <p><strong style="color: var(--blue-deep);">20 – 50</strong> expected attendees, drawing from academia, industry, and national laboratories.</p>
+      <p><strong style="color: var(--blue-deep);">1 keynote</strong> + 2–3 invited speakers, plus a peer-reviewed paper track and structured discussion sessions.</p>
+      <p style="margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--rule);">Proposed within QCE'{{ site.year | modulo: 100 }} topics on <em>Distributed Quantum Computing</em>, <em>Quantum Systems Engineering</em>, and <em>Quantum Communications &amp; Cryptography</em>.</p>
+    </div>
+  </div>
+
+  <h2 class="subhead">Cross-layer perspective</h2>
+  <p style="font-size: 15px; color: var(--ink-soft); margin-bottom: 16px; max-width: 70ch;">{{ site.short_name }} emphasizes integration across the full quantum systems stack, treating each layer's constraints as inseparable from the others:</p>
+  <div class="topic-grid">
+    {% for layer in site.data.workshop.cross_layer_perspective %}
+    <div class="topic-item"><span class="marker">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span><span><strong>{{ layer.layer }}.</strong> {{ layer.text }}</span></div>
+    {% endfor %}
+  </div>
+
+  <h2 class="subhead">Objectives</h2>
+  <div class="prose">
+    <p><strong>Short term —</strong> {{ site.data.workshop.objectives_short }}</p>
+    <p><strong>Long term —</strong> {{ site.data.workshop.objectives_long }}</p>
+  </div>
+
+  <h2 class="subhead">Anticipated outcomes</h2>
+  <div class="prose">
+    <p>{{ site.data.workshop.outcomes }}</p>
+  </div>
+</article>
+
+
+<!-- CFP -->
+<article class="page" id="page-cfp">
+  <div class="page-header">
+    <div class="page-eyebrow">02 / Call for Papers</div>
+    <h1 class="page-title">Call for <em>papers</em></h1>
+    <p class="page-subtitle">{{ site.short_name }} solicits papers on cross-layer infrastructure for distributed quantum computing.</p>
+  </div>
+
+  <div class="prose" style="margin-bottom: 28px;">
+    <p>{{ site.short_name }} workshop papers will be included in the <strong>{{ site.data.workshop.cfp.proceedings }}</strong>. Submissions must follow the IEEE conference format — <strong>{{ site.data.workshop.cfp.page_limit }}</strong>, with 24 pt title and 10 pt main text. LaTeX users should use <code style="font-family: 'JetBrains Mono', monospace; background: white; padding: 1px 5px; border-radius: 2px; font-size: 13px;">{{ site.data.workshop.cfp.latex_class }}</code> without the <code style="font-family: 'JetBrains Mono', monospace; background: white; padding: 1px 5px; border-radius: 2px; font-size: 13px;">compsoc</code> options.</p>
+  </div>
+
+  <h2 class="subhead">Topics of interest</h2>
+  <p style="font-size: 15px; color: var(--ink-soft); margin-bottom: 16px;">Topics include, but are not limited to:</p>
+  <div class="topic-grid">
+    {% for t in site.data.topics %}
+    <div class="topic-item"><span class="marker">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span><span>{{ t }}</span></div>
+    {% endfor %}
+  </div>
+
+  <div class="cfp-grid">
+    <div>
+      <h2 class="subhead">Important dates</h2>
+      <table class="dates-table">
+        <tbody>
+        {% for d in site.data.dates %}
+          <tr{% if d.tentative %} class="tbd"{% endif %}><td>{{ d.label }}</td><td>{{ d.display }}</td></tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      <p style="font-size: 12px; color: var(--ink-faint); margin-top: 12px; font-style: italic;">All deadlines AoE (Anywhere on Earth) unless otherwise noted.</p>
+    </div>
+
+    <div>
+      <h2 class="subhead">Submission types</h2>
+      <table class="dates-table">
+        <tbody>
+        {% for s in site.data.workshop.cfp.submission_types %}
+          <tr><td>{{ s }}</td><td>{{ site.data.workshop.cfp.page_limit | replace: ' including references', ' + refs' }}</td></tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h2 class="subhead">Review process</h2>
+  <ol class="review-criteria">
+    <li>Relevance to DQC infrastructure and cross-layer system design.</li>
+    <li>Technical soundness and methodological rigor.</li>
+    <li>Novelty relative to published work in quantum computing, networking, or systems.</li>
+    <li>Clarity of presentation and reproducibility of empirical claims.</li>
+    <li>Potential to spark interdisciplinary discussion at the workshop.</li>
+  </ol>
+  <p style="font-size: 13px; color: var(--ink-faint); margin-top: 12px;">Review type: {{ site.data.workshop.cfp.review_type }}.</p>
+
+  <a href="{{ site.submission_url }}" target="_blank" rel="noopener" class="submit-btn">Submit via EasyChair →</a>
+</article>
+
+
+<!-- PROGRAM -->
+<article class="page" id="page-program">
+  <div class="page-header">
+    <div class="page-eyebrow">03 / Program</div>
+    <h1 class="page-title">Tentative <em>agenda</em></h1>
+    <p class="page-subtitle">{{ site.short_name }} is structured around four thematic sessions covering the full quantum systems stack, plus a roadmap discussion. The final timing will be confirmed with QCE'{{ site.year | modulo: 100 }}.</p>
+  </div>
+
+  <div class="prose" style="margin-bottom: 32px;">
+    <p>The workshop is interactive, combining <strong>1 keynote</strong>, <strong>2–3 invited speakers</strong> from academia, industry, and national laboratories, and a peer-reviewed contributed paper track. Each session is followed by structured discussion.</p>
+  </div>
+
+  {% assign sn = 0 %}
+  {% for s in site.data.sessions %}
+    {% if s.kind == 'session' %}
+      {% assign sn = sn | plus: 1 %}
+      <div class="session-block">
+        <div class="session-header">
+          <div><span class="session-num">Session {{ sn }}</span><span class="session-name">{{ s.name }}</span></div>
+          <div class="session-time">{{ s.time }}</div>
+        </div>
+        <div class="session-body">{{ s.body }}</div>
+      </div>
+    {% else %}
+      <div class="standalone-item">
+        <div class="name">{{ s.name }}</div>
+        <div class="time">{{ s.time }}</div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</article>
+
+
+<!-- COMMITTEE -->
+<article class="page" id="page-committee">
+  <div class="page-header">
+    <div class="page-eyebrow">04 / Organizers &amp; Committee</div>
+    <h1 class="page-title">Organizers &amp; <em>committee</em></h1>
+    <p class="page-subtitle">{{ site.short_name }} is organized by a team spanning Florida Atlantic University, Oak Ridge National Laboratory, and George Mason University, with a program committee drawn from across academia.</p>
+  </div>
+
+  <h2 class="subhead">Workshop organizers</h2>
+  <div class="people-grid">
+    {% for p in site.data.organizers %}
+    <a class="person-card" href="{{ p.url }}" target="_blank" rel="noopener">
+      <div class="person-photo"><img src="{{ '/assets/img/people/' | append: p.photo | relative_url }}" alt="{{ p.name }}" loading="lazy"></div>
+      <div class="person-meta">
+        <div class="person-name">{{ p.name }}</div>
+        <div class="person-role">{{ p.role }}</div>
+        <div class="person-aff"><em>{{ p.title }}</em><br>{{ p.unit }}<br>{{ p.affiliation }}</div>
+        <div class="person-contact">{{ p.email }}</div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+  <h2 class="subhead">Tentative program committee</h2>
+  <div class="people-grid pc">
+    {% for p in site.data.program_committee %}
+    <a class="person-card" href="{{ p.url }}" target="_blank" rel="noopener">
+      <div class="person-photo"><img src="{{ '/assets/img/people/' | append: p.photo | relative_url }}" alt="{{ p.name }}" loading="lazy"></div>
+      <div class="person-meta">
+        <div class="person-name">{{ p.name }}</div>
+        <div class="person-aff"><em>{{ p.title }}</em><br>{{ p.affiliation }}</div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+  <p style="font-size: 13px; color: var(--ink-faint); margin-top: 16px; font-style: italic;">The program committee is being expanded. Researchers interested in serving on the PC are warmly invited to contact the chair.</p>
+</article>
+
+
+<!-- ATTEND -->
+<article class="page" id="page-attend">
+  <div class="page-header">
+    <div class="page-eyebrow">05 / Attend</div>
+    <h1 class="page-title">Joining <em>{{ site.short_name }}</em></h1>
+    <p class="page-subtitle">Attendance information, target audience, and how to follow workshop announcements.</p>
+  </div>
+
+  <div class="prose">
+    <p>{{ site.short_name }} is held in conjunction with <strong>{{ site.host_conference }}</strong>. Workshop attendance is included with QCE'{{ site.year | modulo: 100 }} registration; see the host conference for registration tiers and venue details once announced.</p>
+  </div>
+
+  <h2 class="subhead">Logistics</h2>
+  <table class="dates-table">
+    <tbody>
+      <tr><td>Host conference</td><td><a href="{{ site.host_conference_url }}" target="_blank" rel="noopener">{{ site.host_conference }}</a></td></tr>
+      <tr><td>Workshop date</td><td>TBD (aligned with QCE'{{ site.year | modulo: 100 }} schedule)</td></tr>
+      <tr><td>Expected attendees</td><td>20–50 (academia, industry, national laboratories)</td></tr>
+      <tr><td>Format</td><td>1 keynote + 2–3 invited speakers + peer-reviewed papers + discussion</td></tr>
+      <tr><td>Registration</td><td>Via QCE'{{ site.year | modulo: 100 }} (announced separately)</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="subhead">Target audience</h2>
+  <div class="prose">
+    <p>{{ site.data.workshop.target_audience }}</p>
+  </div>
+
+  <h2 class="subhead">Stay informed</h2>
+  <div class="prose">
+    <p>For workshop announcements, contact the main organizer <a href="mailto:{{ site.main_contact_email }}">{{ site.main_contact_email }}</a>, and watch the <a href="{{ site.host_conference_url }}" target="_blank" rel="noopener">{{ site.host_conference }}</a> programme.</p>
+  </div>
+</article>

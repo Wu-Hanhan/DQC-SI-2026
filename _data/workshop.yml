@@ -1,0 +1,83 @@
+# Workshop-level text. Edit here, not in templates.
+
+summary: >
+  This workshop explores systems and infrastructure for Distributed Quantum
+  Computing (DQC), with an emphasis on how coordinated design enables scalable
+  multi-QPU execution. Attendees will gain insights into integrating physical,
+  network, system, and application layers to improve scalability, reliability,
+  and overall efficiency in DQC.
+
+abstract: >
+  As quantum computing systems continue to scale, DQC has emerged as a promising
+  paradigm to overcome the limitations of individual quantum processors. In DQC,
+  multiple quantum processing units (QPUs) are interconnected through quantum
+  networks, enabling them to collaboratively execute computational tasks that
+  exceed the capabilities of a single device. This shift from isolated processors
+  to interconnected systems represents a fundamental step toward scalable quantum
+  computing.
+  However, current approaches largely treat system layers in isolation, separating
+  physical-layer constraints, network protocols, and application-level execution,
+  which leads to inefficiencies in scalability and reliability. As quantum systems
+  grow in size and complexity, these limitations become increasingly significant.
+  This workshop focuses on system and infrastructure design for DQC, highlighting
+  coordinated design across physical, network, system, and application layers. By
+  explicitly connecting these layers, cross-layer approaches can capture the
+  interplay between hardware limitations, communication processes, and application
+  requirements, enabling more efficient and scalable system designs.
+
+objectives_short: >
+  The short-term objective is to introduce the key challenges and emerging
+  solutions in cross-layer infrastructure for DQC. Through invited talks and
+  discussions, the workshop will present state-of-the-art approaches in DQC
+  cross-layer infrastructure, while fostering interdisciplinary exchange among
+  researchers in quantum computing, networking, systems, and applications.
+
+objectives_long: >
+  The long-term vision is to establish cross-layer infrastructure as a foundational
+  paradigm for scalable quantum systems and to build a sustained research community
+  around this theme. The workshop aims to catalyze the development of a shared
+  research roadmap and open challenges for DQC infrastructure. It also seeks to
+  promote common frameworks, benchmarks, and simulation platforms that integrate
+  multiple system layers, ultimately supporting the realization of scalable quantum
+  systems for scientific discoveries and industrial applications.
+
+outcomes: >
+  The workshop is expected to catalyze a cross-layer DQC infrastructure community
+  connecting researchers in quantum computing, networking, systems, and applications.
+  Key outcomes include the identification of open challenges, an initial research
+  roadmap for cross-layer quantum infrastructure (covering core design principles,
+  system abstractions, and priority research directions), and progress toward shared
+  frameworks and benchmarks integrating multiple system layers.
+
+target_audience: >
+  Researchers and practitioners in quantum computing, quantum networking, computer
+  systems, and applications — particularly those interested in scalable and
+  distributed quantum infrastructures. Also relevant to researchers in computer
+  architecture, distributed systems, and high-performance computing exploring the
+  integration of quantum technologies into larger computing ecosystems.
+  Attendees are expected to have a basic understanding of quantum computing concepts;
+  expertise in specific subfields (e.g., networking or systems) is not required.
+
+cross_layer_perspective:
+  - layer: "Physical"
+    text: "Qubit interconnects, photonic links, and the device characteristics that bound multi-QPU computation."
+  - layer: "Network"
+    text: "Entanglement routing, network topologies, and resource management for the quantum links that bind QPUs together."
+  - layer: "System"
+    text: "Distributed compilers, runtimes, and middleware. Network-aware circuit partitioning and execution orchestration."
+  - layer: "Application"
+    text: "Hybrid quantum-classical distributed systems and co-design opportunities driven by application requirements."
+
+# CFP / submission policy
+cfp:
+  page_limit: "4 pages including references"
+  format: "IEEE conference format, 24 pt title, 10 pt main text"
+  latex_class: '\documentclass[10pt, conference]{IEEEtran}'
+  review_type: "Single-blind (include author names and affiliations)"
+  proceedings: "QCE'26 Proceedings"
+  submission_types:
+    - "Original research"
+    - "Work-in-progress"
+    - "Position papers"
+    - "System / infrastructure designs"
+    - "Early-stage ideas"
