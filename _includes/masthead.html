@@ -1,9 +1,29 @@
 <!-- MASTHEAD -->
 <header class="masthead">
   <div class="masthead-inner">
+    <a href="{{ site.host_conference_url }}" target="_blank" rel="noopener" class="qw-logo-link" title="IEEE Quantum Week {{ site.year }}">
+      <svg class="qw-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="IEEE Quantum Week">
+        <g transform="rotate(45 50 50)">
+          <rect x="14" y="14" width="72" height="72" rx="3" fill="#1c2348"/>
+          <rect x="14" y="14" width="72" height="72" rx="3" fill="none" stroke="#3a4470" stroke-width="1.2"/>
+        </g>
+        <text x="50" y="42" text-anchor="middle"
+              font-family="'JetBrains Mono', monospace"
+              font-size="10" font-weight="700" fill="#ffffff"
+              letter-spacing="1">IEEE</text>
+        <text x="50" y="56" text-anchor="middle"
+              font-family="'JetBrains Mono', monospace"
+              font-size="8" font-weight="600" fill="#e8eaf5"
+              letter-spacing="0.6">QUANTUM</text>
+        <text x="50" y="68" text-anchor="middle"
+              font-family="'JetBrains Mono', monospace"
+              font-size="8" font-weight="600" fill="#e8eaf5"
+              letter-spacing="0.6">WEEK</text>
+      </svg>
+    </a>
+
     <div class="logo-mark">
       <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-label="DQC-SI logo">
-        <!-- Stylized network of three QPU nodes connected by entanglement links -->
         <defs>
           <linearGradient id="grad-blue" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stop-color="#1e4d8c"/>
@@ -21,9 +41,16 @@
         <circle cx="40" cy="58" r="3" fill="#fff"/>
       </svg>
     </div>
-    <div class="masthead-text">
+
+    <div class="brand-text">
       <div class="brand-title">DQC<span class="si">-SI</span><sup>{{ site.year }}</sup></div>
-      <div class="brand-sub">{{ site.full_name }} Workshop · {{ site.host_conference }}</div>
+      <div class="brand-tagline">{{ site.full_name }} Workshop</div>
+    </div>
+
+    <div class="masthead-right">
+      <div class="date">QCE {{ site.year }}</div>
+      <div class="venue">IEEE Quantum Week</div>
+      <div class="colocate">held in conjunction with QCE'{{ site.year | modulo: 100 }}</div>
     </div>
   </div>
 </header>
