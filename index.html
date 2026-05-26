@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<div class="container">
+
 <!-- ABOUT -->
 <article class="page active" id="page-about">
   <div class="page-header">
@@ -21,67 +23,138 @@ layout: default
     </div>
     <div class="field">
       <div class="label">Paper limit</div>
-      <div class="value"><strong>{{ site.data.workshop.cfp.page_limit }}</strong>IEEE conference format · {{ site.data.workshop.cfp.review_type | downcase }}</div>
+      <div class="value"><strong>4 pages</strong>IEEE conference format · single-blind</div>
     </div>
     <div class="field">
       <div class="label">Main contact</div>
-      <div class="value"><strong>{{ site.data.organizers[0].name }}</strong><a href="mailto:{{ site.main_contact_email }}">{{ site.main_contact_email }}</a></div>
+      <div class="value"><strong>Zebo Yang</strong><a href="mailto:yangz@fau.edu">yangz@fau.edu</a></div>
     </div>
   </div>
 
   <h2 class="subhead">Workshop summary</h2>
   <div class="about-layout">
     <div class="prose">
-      <p>{{ site.data.workshop.summary }}</p>
-      <p>{{ site.data.workshop.abstract }}</p>
+      <p>This workshop explores systems and infrastructure for <strong>Distributed Quantum Computing (DQC)</strong>, with an emphasis on how coordinated design enables scalable multi-QPU execution. Attendees will gain insights into integrating physical, network, system, and application layers to improve scalability, reliability, and overall efficiency in DQC.</p>
+      <p>As quantum computing systems continue to scale, DQC has emerged as a promising paradigm to overcome the limitations of individual quantum processors. Multiple quantum processing units (QPUs) are interconnected through quantum networks, enabling them to collaboratively execute computational tasks that exceed the capabilities of a single device. This shift from isolated processors to interconnected systems represents a fundamental step toward scalable quantum computing.</p>
+      <p>However, current approaches largely treat system layers in isolation, separating physical-layer constraints, network protocols, and application-level execution, which leads to inefficiencies in scalability and reliability. By explicitly connecting these layers, <strong>cross-layer approaches</strong> capture the interplay between hardware limitations, communication processes, and application requirements — enabling more efficient and scalable system designs. The long-term vision is to enable efficient quantum data centers and networked quantum systems that support large-scale scientific and industrial applications.</p>
     </div>
     <div class="sidecard">
       <h4>— Workshop in brief</h4>
       <p><strong style="color: var(--blue-deep);">20 – 50</strong> expected attendees, drawing from academia, industry, and national laboratories.</p>
       <p><strong style="color: var(--blue-deep);">1 keynote</strong> + 2–3 invited speakers, plus a peer-reviewed paper track and structured discussion sessions.</p>
-      <p style="margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--rule);">Proposed within QCE'{{ site.year | modulo: 100 }} topics on <em>Distributed Quantum Computing</em>, <em>Quantum Systems Engineering</em>, and <em>Quantum Communications &amp; Cryptography</em>.</p>
+      <p style="margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--rule);">Proposed within QCE'26 topics on <em>Distributed Quantum Computing</em>, <em>Quantum Systems Engineering</em>, and <em>Quantum Communications &amp; Cryptography</em>.</p>
+    </div>
+  </div>
+
+  <div class="banner-img">
+    <svg viewBox="0 0 1200 240" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.4" opacity="0.3"/>
+        </pattern>
+      </defs>
+      <rect width="1200" height="240" fill="url(#grid)"/>
+      <!-- Network of QPU nodes -->
+      <g fill="none" stroke="white" stroke-width="1.2" opacity="0.6">
+        <!-- Quantum entanglement links (dashed) -->
+        <line x1="180" y1="120" x2="420" y2="80" stroke-dasharray="4,4"/>
+        <line x1="180" y1="120" x2="420" y2="160" stroke-dasharray="4,4"/>
+        <line x1="420" y1="80" x2="600" y2="120" stroke-dasharray="4,4"/>
+        <line x1="420" y1="160" x2="600" y2="120" stroke-dasharray="4,4"/>
+        <line x1="600" y1="120" x2="780" y2="80" stroke-dasharray="4,4"/>
+        <line x1="600" y1="120" x2="780" y2="160" stroke-dasharray="4,4"/>
+        <line x1="780" y1="80" x2="1020" y2="120" stroke-dasharray="4,4"/>
+        <line x1="780" y1="160" x2="1020" y2="120" stroke-dasharray="4,4"/>
+      </g>
+      <g fill="none" stroke="white" stroke-width="1.5">
+        <!-- QPU nodes -->
+        <circle cx="180" cy="120" r="32"/>
+        <circle cx="420" cy="80" r="24"/>
+        <circle cx="420" cy="160" r="24"/>
+        <circle cx="600" cy="120" r="36"/>
+        <circle cx="780" cy="80" r="24"/>
+        <circle cx="780" cy="160" r="24"/>
+        <circle cx="1020" cy="120" r="32"/>
+      </g>
+      <!-- Inner qubit lattices -->
+      <g fill="white" opacity="0.85">
+        <circle cx="170" cy="110" r="2"/><circle cx="180" cy="110" r="2"/><circle cx="190" cy="110" r="2"/>
+        <circle cx="170" cy="120" r="2"/><circle cx="180" cy="120" r="2"/><circle cx="190" cy="120" r="2"/>
+        <circle cx="170" cy="130" r="2"/><circle cx="180" cy="130" r="2"/><circle cx="190" cy="130" r="2"/>
+
+        <circle cx="590" cy="110" r="2"/><circle cx="600" cy="110" r="2"/><circle cx="610" cy="110" r="2"/>
+        <circle cx="590" cy="120" r="2"/><circle cx="600" cy="120" r="2"/><circle cx="610" cy="120" r="2"/>
+        <circle cx="590" cy="130" r="2"/><circle cx="600" cy="130" r="2"/><circle cx="610" cy="130" r="2"/>
+
+        <circle cx="1010" cy="110" r="2"/><circle cx="1020" cy="110" r="2"/><circle cx="1030" cy="110" r="2"/>
+        <circle cx="1010" cy="120" r="2"/><circle cx="1020" cy="120" r="2"/><circle cx="1030" cy="120" r="2"/>
+        <circle cx="1010" cy="130" r="2"/><circle cx="1020" cy="130" r="2"/><circle cx="1030" cy="130" r="2"/>
+      </g>
+    </svg>
+    <div class="caption">
+      From isolated processors to interconnected quantum systems.
+      <span class="place">Cross-layer · Multi-QPU · Scalable</span>
     </div>
   </div>
 
   <h2 class="subhead">Cross-layer perspective</h2>
-  <p style="font-size: 15px; color: var(--ink-soft); margin-bottom: 16px; max-width: 70ch;">{{ site.short_name }} emphasizes integration across the full quantum systems stack, treating each layer's constraints as inseparable from the others:</p>
-  <div class="topic-grid">
-    {% for layer in site.data.workshop.cross_layer_perspective %}
-    <div class="topic-item"><span class="marker">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span><span><strong>{{ layer.layer }}.</strong> {{ layer.text }}</span></div>
-    {% endfor %}
+  <p style="font-size: 15px; color: var(--ink-soft); margin-bottom: 4px; max-width: 70ch;">DQC-SI emphasizes integration across the full quantum systems stack, treating each layer's constraints as inseparable from the others:</p>
+  <div class="stack-diagram">
+    <div class="stack-layer">
+      <div class="layer-name">Application</div>
+      <div class="layer-desc"><strong>Distributed quantum algorithms</strong> — hybrid quantum-classical workloads, applications enabled by multi-QPU execution, and program-level abstractions over networked devices.</div>
+    </div>
+    <div class="stack-layer">
+      <div class="layer-name">System / Software</div>
+      <div class="layer-desc"><strong>Compilers, runtimes, and middleware</strong> — network-aware circuit partitioning, distributed circuit execution, and system software that orchestrates multi-QPU workloads.</div>
+    </div>
+    <div class="stack-layer">
+      <div class="layer-name">Network</div>
+      <div class="layer-desc"><strong>Quantum interconnects</strong> — entanglement routing, resource management, and topology design for the quantum links that bind QPUs together.</div>
+    </div>
+    <div class="stack-layer">
+      <div class="layer-name">Physical / Link</div>
+      <div class="layer-desc"><strong>Hardware foundations</strong> — physical-layer constraints of qubit interconnects, link-layer protocols, and the device characteristics that bound what the upper layers can achieve.</div>
+    </div>
   </div>
 
   <h2 class="subhead">Objectives</h2>
   <div class="prose">
-    <p><strong>Short term —</strong> {{ site.data.workshop.objectives_short }}</p>
-    <p><strong>Long term —</strong> {{ site.data.workshop.objectives_long }}</p>
+    <p>The <strong>short-term objective</strong> of this workshop is to introduce the key challenges and emerging solutions in cross-layer infrastructure for DQC. Through invited talks and discussions, the workshop will present state-of-the-art approaches while fostering interdisciplinary exchange among researchers in quantum computing, networking, systems, and applications.</p>
+    <p>The <strong>long-term vision</strong> is to establish cross-layer infrastructure as a foundational paradigm for scalable quantum systems, and to build a sustained research community around this theme. The workshop aims to catalyze a shared research roadmap, common frameworks and benchmarks, and a structured community effort — including the formation of a DQC working group, special sessions, collaborative projects, and future editions.</p>
   </div>
 
   <h2 class="subhead">Anticipated outcomes</h2>
   <div class="prose">
-    <p>{{ site.data.workshop.outcomes }}</p>
+    <p>DQC-SI is expected to catalyze a cross-layer DQC infrastructure community connecting researchers in quantum computing, networking, systems, and applications. Key outcomes include the identification of open challenges, an initial research roadmap for cross-layer quantum infrastructure (covering core design principles, system abstractions, and priority research directions), and progress toward shared frameworks and benchmarks integrating multiple system layers.</p>
   </div>
 </article>
-
 
 <!-- CFP -->
 <article class="page" id="page-cfp">
   <div class="page-header">
     <div class="page-eyebrow">02 / Call for Papers</div>
     <h1 class="page-title">Call for <em>papers</em></h1>
-    <p class="page-subtitle">{{ site.short_name }} solicits papers on cross-layer infrastructure for distributed quantum computing.</p>
+    <p class="page-subtitle">We invite original research, work-in-progress papers, and position papers on cross-layer infrastructure for distributed quantum computing.</p>
   </div>
 
-  <div class="prose" style="margin-bottom: 28px;">
-    <p>{{ site.short_name }} workshop papers will be included in the <strong>{{ site.data.workshop.cfp.proceedings }}</strong>. Submissions must follow the IEEE conference format — <strong>{{ site.data.workshop.cfp.page_limit }}</strong>, with 24 pt title and 10 pt main text. LaTeX users should use <code style="font-family: 'JetBrains Mono', monospace; background: white; padding: 1px 5px; border-radius: 2px; font-size: 13px;">{{ site.data.workshop.cfp.latex_class }}</code> without the <code style="font-family: 'JetBrains Mono', monospace; background: white; padding: 1px 5px; border-radius: 2px; font-size: 13px;">compsoc</code> options.</p>
+  <div class="callout">
+    <p>DQC-SI workshop papers will be included in the <strong>QCE'26 Proceedings</strong>. Submissions must follow the IEEE conference format — <strong>4 pages maximum including references</strong>, with 24 pt title and 10 pt main text. LaTeX users should use <code style="font-family: 'JetBrains Mono', monospace; background: white; padding: 1px 5px; border-radius: 2px; font-size: 13px;">\documentclass[10pt, conference]{IEEEtran}</code> without the <code style="font-family: 'JetBrains Mono', monospace; background: white; padding: 1px 5px; border-radius: 2px; font-size: 13px;">compsoc</code> options.</p>
+    <p>Review will be <strong>single-blind</strong>; author names and affiliations should be included. All submissions are peer-reviewed by the workshop program committee and must comply with the IEEE Policy on Authorship.</p>
   </div>
 
   <h2 class="subhead">Topics of interest</h2>
   <p style="font-size: 15px; color: var(--ink-soft); margin-bottom: 16px;">Topics include, but are not limited to:</p>
   <div class="topic-grid">
-    {% for t in site.data.topics %}
-    <div class="topic-item"><span class="marker">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span><span>{{ t }}</span></div>
-    {% endfor %}
+    <div class="topic-item"><span class="marker">01</span><span>System and infrastructure design for DQC</span></div>
+    <div class="topic-item"><span class="marker">02</span><span>Network-aware quantum circuit partitioning</span></div>
+    <div class="topic-item"><span class="marker">03</span><span>Distributed circuit execution and compilation</span></div>
+    <div class="topic-item"><span class="marker">04</span><span>Quantum interconnects and network topologies</span></div>
+    <div class="topic-item"><span class="marker">05</span><span>Quantum systems software, compilers, and middleware for distributed execution</span></div>
+    <div class="topic-item"><span class="marker">06</span><span>Quantum networking, entanglement routing, resource management for DQC</span></div>
+    <div class="topic-item"><span class="marker">07</span><span>Cross-layer DQC simulation and benchmarking</span></div>
+    <div class="topic-item"><span class="marker">08</span><span>Hybrid quantum-classical distributed systems</span></div>
+    <div class="topic-item"><span class="marker">09</span><span>Applications enabled by DQC</span></div>
   </div>
 
   <div class="cfp-grid">
@@ -94,16 +167,18 @@ layout: default
         {% endfor %}
         </tbody>
       </table>
-      <p style="font-size: 12px; color: var(--ink-faint); margin-top: 12px; font-style: italic;">All deadlines AoE (Anywhere on Earth) unless otherwise noted.</p>
+      <p style="font-size: 12px; color: var(--ink-faint); margin-top: 12px; font-style: italic;">Dates will be aligned with the QCE'26 conference schedule. Subscribe to the mailing list below for updates.</p>
     </div>
 
     <div>
       <h2 class="subhead">Submission types</h2>
       <table class="dates-table">
         <tbody>
-        {% for s in site.data.workshop.cfp.submission_types %}
-          <tr><td>{{ s }}</td><td>{{ site.data.workshop.cfp.page_limit | replace: ' including references', ' + refs' }}</td></tr>
-        {% endfor %}
+          <tr><td>Original research</td><td>4 pages + refs</td></tr>
+          <tr><td>Work-in-progress</td><td>4 pages + refs</td></tr>
+          <tr><td>Position papers</td><td>4 pages + refs</td></tr>
+          <tr><td>System / infrastructure designs</td><td>4 pages + refs</td></tr>
+          <tr><td>Early-stage ideas</td><td>4 pages + refs</td></tr>
         </tbody>
       </table>
     </div>
@@ -117,76 +192,109 @@ layout: default
     <li>Clarity of presentation and reproducibility of empirical claims.</li>
     <li>Potential to spark interdisciplinary discussion at the workshop.</li>
   </ol>
-  <p style="font-size: 13px; color: var(--ink-faint); margin-top: 12px;">Review type: {{ site.data.workshop.cfp.review_type }}.</p>
 
-  <a href="{{ site.submission_url }}" target="_blank" rel="noopener" class="submit-btn">Submit via EasyChair →</a>
+  <a href="https://easychair.org/conferences2/submissions?a=36846799" target="_blank" class="submit-btn">Submit via EasyChair →</a>
 </article>
-
 
 <!-- PROGRAM -->
 <article class="page" id="page-program">
   <div class="page-header">
     <div class="page-eyebrow">03 / Program</div>
     <h1 class="page-title">Tentative <em>agenda</em></h1>
-    <p class="page-subtitle">{{ site.short_name }} is structured around four thematic sessions covering the full quantum systems stack, plus a roadmap discussion. The final timing will be confirmed with QCE'{{ site.year | modulo: 100 }}.</p>
+    <p class="page-subtitle">DQC-SI is structured around four thematic sessions covering the full quantum systems stack, plus a roadmap discussion. The final timing will be confirmed with QCE'26.</p>
   </div>
 
   <div class="prose" style="margin-bottom: 32px;">
     <p>The workshop is interactive, combining <strong>1 keynote</strong>, <strong>2–3 invited speakers</strong> from academia, industry, and national laboratories, and a peer-reviewed contributed paper track. Each session is followed by structured discussion.</p>
   </div>
 
-  {% assign sn = 0 %}
-  {% for s in site.data.sessions %}
-    {% if s.kind == 'session' %}
-      {% assign sn = sn | plus: 1 %}
-      <div class="session-block">
-        <div class="session-header">
-          <div><span class="session-num">Session {{ sn }}</span><span class="session-name">{{ s.name }}</span></div>
-          <div class="session-time">{{ s.time }}</div>
-        </div>
-        <div class="session-body">{{ s.body }}</div>
-      </div>
-    {% else %}
-      <div class="standalone-item">
-        <div class="name">{{ s.name }}</div>
-        <div class="time">{{ s.time }}</div>
-      </div>
-    {% endif %}
-  {% endfor %}
-</article>
+  <div class="standalone-item">
+    <div class="name">Opening &amp; Keynote</div>
+    <div class="time">Session opens</div>
+  </div>
 
+  <div class="session-block">
+    <div class="session-header">
+      <div><span class="session-num">Session 1</span><span class="session-name">Physical- and Link-Layer Foundations for DQC</span></div>
+      <div class="session-time">TBD</div>
+    </div>
+    <div class="session-body">
+      Physical-layer constraints of qubit interconnects, link-layer protocols, and the device characteristics that bound multi-QPU computation. Invited talk + contributed presentations.
+    </div>
+  </div>
+
+  <div class="session-block">
+    <div class="session-header">
+      <div><span class="session-num">Session 2</span><span class="session-name">Quantum Networking and Resource Management in DQC</span></div>
+      <div class="session-time">TBD</div>
+    </div>
+    <div class="session-body">
+      Entanglement routing, network topologies, and resource management for the quantum links that bind QPUs together. Invited talk + contributed presentations.
+    </div>
+  </div>
+
+  <div class="session-block">
+    <div class="session-header">
+      <div><span class="session-num">Session 3</span><span class="session-name">Systems and Software for DQC Execution</span></div>
+      <div class="session-time">TBD</div>
+    </div>
+    <div class="session-body">
+      Distributed compilers, runtimes, and middleware. Network-aware circuit partitioning and execution orchestration over multi-QPU systems. Invited talk + contributed presentations.
+    </div>
+  </div>
+
+  <div class="session-block">
+    <div class="session-header">
+      <div><span class="session-num">Session 4</span><span class="session-name">DQC Applications and Cross-Layer Co-Design</span></div>
+      <div class="session-time">TBD</div>
+    </div>
+    <div class="session-body">
+      Applications enabled by DQC, hybrid quantum-classical distributed systems, and co-design opportunities that emerge when application requirements drive lower-layer decisions. Invited talk + contributed presentations.
+    </div>
+  </div>
+
+  <div class="standalone-item">
+    <div class="name">Discussion — DQC Design Challenges and Future Directions</div>
+    <div class="time">Open forum</div>
+  </div>
+
+  <div class="standalone-item">
+    <div class="name">Closing Remarks</div>
+    <div class="time">Wrap-up</div>
+  </div>
+</article>
 
 <!-- COMMITTEE -->
 <article class="page" id="page-committee">
   <div class="page-header">
     <div class="page-eyebrow">04 / Organizers &amp; Committee</div>
     <h1 class="page-title">Organizers &amp; <em>committee</em></h1>
-    <p class="page-subtitle">{{ site.short_name }} is organized by a team spanning Florida Atlantic University, Oak Ridge National Laboratory, and George Mason University, with a program committee drawn from across academia.</p>
+    <p class="page-subtitle">DQC-SI is organized by a team spanning Florida Atlantic University, Oak Ridge National Laboratory, and George Mason University, with a program committee drawn from across academia.</p>
   </div>
 
   <h2 class="subhead">Workshop organizers</h2>
-  <div class="people-grid">
+  <div class="pc-card-grid people-with-photos">
     {% for p in site.data.organizers %}
-    <a class="person-card" href="{{ p.url }}" target="_blank" rel="noopener">
-      <div class="person-photo"><img src="{{ '/assets/img/people/' | append: p.photo | relative_url }}" alt="{{ p.name }}" loading="lazy"></div>
-      <div class="person-meta">
-        <div class="person-name">{{ p.name }}</div>
-        <div class="person-role">{{ p.role }}</div>
-        <div class="person-aff"><em>{{ p.title }}</em><br>{{ p.unit }}<br>{{ p.affiliation }}</div>
-        <div class="person-contact">{{ p.email }}</div>
+    <a class="pc-card pc-card-link" href="{{ p.url }}" target="_blank" rel="noopener">
+      <div class="pc-card-photo"><img src="{{ '/assets/img/people/' | append: p.photo | relative_url }}" alt="{{ p.name }}" loading="lazy"></div>
+      <div class="pc-card-body">
+        <div class="name">{{ p.name }}</div>
+        <div class="role">{{ p.role }}</div>
+        <div class="aff"><em>{{ p.title }}</em><br>{{ p.unit }}<br>{{ p.affiliation }}</div>
+        <div class="contact"><span>{{ p.email }}</span></div>
       </div>
     </a>
     {% endfor %}
   </div>
 
   <h2 class="subhead">Tentative program committee</h2>
-  <div class="people-grid pc">
+  <div class="pc-card-grid people-with-photos pc-cards-compact">
     {% for p in site.data.program_committee %}
-    <a class="person-card" href="{{ p.url }}" target="_blank" rel="noopener">
-      <div class="person-photo"><img src="{{ '/assets/img/people/' | append: p.photo | relative_url }}" alt="{{ p.name }}" loading="lazy"></div>
-      <div class="person-meta">
-        <div class="person-name">{{ p.name }}</div>
-        <div class="person-aff"><em>{{ p.title }}</em><br>{{ p.affiliation }}</div>
+    <a class="pc-card pc-card-link" href="{{ p.url }}" target="_blank" rel="noopener">
+      <div class="pc-card-photo"><img src="{{ '/assets/img/people/' | append: p.photo | relative_url }}" alt="{{ p.name }}" loading="lazy"></div>
+      <div class="pc-card-body">
+        <div class="name">{{ p.name }}</div>
+        <div class="aff"><em>{{ p.title }}</em><br>{{ p.affiliation }}</div>
       </div>
     </a>
     {% endfor %}
@@ -195,37 +303,54 @@ layout: default
   <p style="font-size: 13px; color: var(--ink-faint); margin-top: 16px; font-style: italic;">The program committee is being expanded. Researchers interested in serving on the PC are warmly invited to contact the chair.</p>
 </article>
 
-
 <!-- ATTEND -->
 <article class="page" id="page-attend">
   <div class="page-header">
     <div class="page-eyebrow">05 / Attend</div>
-    <h1 class="page-title">Joining <em>{{ site.short_name }}</em></h1>
+    <h1 class="page-title">Joining <em>DQC-SI</em></h1>
     <p class="page-subtitle">Attendance information, target audience, and how to follow workshop announcements.</p>
   </div>
 
   <div class="prose">
-    <p>{{ site.short_name }} is held in conjunction with <strong>{{ site.host_conference }}</strong>. Workshop attendance is included with QCE'{{ site.year | modulo: 100 }} registration; see the host conference for registration tiers and venue details once announced.</p>
+    <p>DQC-SI is held in conjunction with <strong>IEEE Quantum Week (QCE {{ site.year }})</strong>. Workshop attendance is included with QCE'26 registration; see the host conference for registration tiers and venue details once announced.</p>
   </div>
 
   <h2 class="subhead">Logistics</h2>
-  <table class="dates-table">
-    <tbody>
-      <tr><td>Host conference</td><td><a href="{{ site.host_conference_url }}" target="_blank" rel="noopener">{{ site.host_conference }}</a></td></tr>
-      <tr><td>Workshop date</td><td>TBD (aligned with QCE'{{ site.year | modulo: 100 }} schedule)</td></tr>
-      <tr><td>Expected attendees</td><td>20–50 (academia, industry, national laboratories)</td></tr>
-      <tr><td>Format</td><td>1 keynote + 2–3 invited speakers + peer-reviewed papers + discussion</td></tr>
-      <tr><td>Registration</td><td>Via QCE'{{ site.year | modulo: 100 }} (announced separately)</td></tr>
-    </tbody>
-  </table>
+  <div class="attend-grid">
+    <div>
+      <table class="attend-detail">
+        <tbody>
+          <tr><td>Host conference</td><td>IEEE Quantum Week — QCE {{ site.year }}</td></tr>
+          <tr><td>Format</td><td>In-person workshop with invited talks, peer-reviewed contributed papers, and structured discussion</td></tr>
+          <tr><td>Expected size</td><td>20 – 50 attendees</td></tr>
+          <tr><td>Speakers</td><td>1 keynote + 2–3 invited talks + contributed presentations</td></tr>
+          <tr><td>Registration</td><td>Via the QCE'26 conference portal (link forthcoming)</td></tr>
+          <tr><td>Proceedings</td><td>Included in the QCE'26 Proceedings via IEEE Xplore</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="qce-card">
+      <h4>— Host conference</h4>
+      <div class="qce-name">IEEE QCE {{ site.year }}</div>
+      <p>The IEEE International Conference on Quantum Computing and Engineering — "IEEE Quantum Week" — is the flagship annual venue for the quantum computing community, organized by the IEEE Computer Society.</p>
+      <a href="https://qce.quantum.ieee.org" target="_blank">qce.quantum.ieee.org →</a>
+    </div>
+  </div>
 
   <h2 class="subhead">Target audience</h2>
   <div class="prose">
-    <p>{{ site.data.workshop.target_audience }}</p>
+    <p>This workshop targets researchers and practitioners in quantum computing, quantum networking, computer systems, and applications — particularly those interested in scalable and distributed quantum infrastructures. It is also relevant to researchers in computer architecture, distributed systems, and high-performance computing exploring the integration of quantum technologies into larger computing ecosystems.</p>
+    <p>The workshop is designed to be accessible to participants with a general background in quantum computing or computer systems, with introductory context provided to ensure a common understanding across disciplines. Expertise in specific subfields (e.g., networking or systems) is not required. We aim to attract a diverse mix from academia, industry, and national laboratories.</p>
   </div>
 
   <h2 class="subhead">Stay informed</h2>
   <div class="prose">
-    <p>For workshop announcements, contact the main organizer <a href="mailto:{{ site.main_contact_email }}">{{ site.main_contact_email }}</a>, and watch the <a href="{{ site.host_conference_url }}" target="_blank" rel="noopener">{{ site.host_conference }}</a> programme.</p>
+    <p>For workshop updates, important dates, and the call for papers, please contact the workshop organizers — particularly the main contact, <a href="mailto:yangz@fau.edu">Dr. Zebo Yang (yangz@fau.edu)</a>. Announcements will also be distributed via QCE'26 channels and academic networks including LinkedIn.</p>
   </div>
+
+  <a href="mailto:yangz@fau.edu" class="submit-btn">Contact the workshop chair →</a>
 </article>
+
+</div>
+</div>

@@ -10,8 +10,8 @@ full_name: "Distributed Quantum Computing Systems and Infrastructure"
 tagline: "Distributed Quantum Computing Systems and Infrastructure"
 host_conference: "IEEE Quantum Week (QCE 2026)"
 host_conference_url: "https://qce.quantum.ieee.org"
-url: "https://Wu-Hanhan.github.io"
-baseurl: "/DQC-SI-2026"
+url: "" # set to https://<user>.github.io once deployed; leave blank for local
+baseurl: "" # set to /repo-name if not deploying at root
 
 # Submission system
 submission_url: "https://easychair.org/conferences2/submissions?a=36846799"
